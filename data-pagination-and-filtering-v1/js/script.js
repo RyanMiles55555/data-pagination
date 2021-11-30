@@ -85,13 +85,14 @@ function paginationButtons(list) {
     button.type = "button";
     button.value = i;
 
-    linkList.appendChild(button);
+    li.appendChild(button);
+    linkList.appendChild(li);
   }
 
   linkList.childNodes[0].className = "active";
 
   linkList.addEventListener("click", (e) => {
-    if ((e.target.type = "button")) {
+    if (e.target.type === "button") {
       for (let i = 0; i < linkList.childNodes.length; i++) {
         linkList.childNodes[i].className = "";
       }
